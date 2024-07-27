@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/utility.css" />
+  </head>
+  <body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <div class="container flex justify-item align-center">
+      <div class="left flex dir-col border">
+        <div class="home p-1 dir-col flex">
+          <div class="logo flex align-center">
+            <img src="img/logo.svg" alt="logo" />
+            <i class="fa-solid fa-xmark hoverwhite"></i>
+          </div>
+          <ul class="flex dir-col">
+            <li class="flex align-center pointer">
+              <img src="img/home.svg" alt="Home" />Home
+            </li>
+            <li class="flex align-center pointer">
+              <img src="img/search.svg" alt="Search" />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library p-1 flex dir-col">
+          <div class="heading flex align-center">
+            <div class="part1 flex align-center pointer">
+              <img src="img/library.svg" alt="library" />
+              Your Library
+            </div>
+            <i class="fa-solid fa-plus pointer"></i>
+          </div>
+          <div class="songs scrolbar">
+            <ul></ul>
+          </div>
+          <div class="footer flex dir-col">
+            <div class="links">
+              <div>
+                <a
+                  href="https://www.spotify.com/in-en/legal/"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">Legal</span>
+                </a>
+                <a
+                  href="https://www.spotify.com/in-en/safetyandprivacy/"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">Safety & Privacy Center</span>
+                </a>
+                <a
+                  href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">Privacy Policy</span>
+                </a>
+                <a
+                  href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">Cookies</span>
+                </a>
+                <a
+                  href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">About Ads</span>
+                </a>
+                <a
+                  href="https://www.spotify.com/in-en/accessibility/"
+                  data-encore-id="textLink"
+                >
+                  <span data-encore-id="type">Accessibility</span>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pointer flex align-center justify-center">
+              <img src="img/language.svg" alt="language" /> English
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="right border">
+       <div class="main-container scrolbar">
+        <div class="main-header flex align-center">
+            <div class="nav flex">
+              <div class="arrow">
+                <i class="fa-solid fa-chevron-left hoverwhite pointer"></i>
+              </div>
+              <div class="arrow"><i class="fa-solid fa-chevron-right hoverwhite pointer"></i></div>
+            </div>
+            <div class="hamburger">
+              <i class="fa-solid fa-bars hoverwhite pointer"></i>
+            </div>
+            <div class="nav-buttons flex">
+              <button class="signup-button pointer" type="button">Sign up</button>
+              <button class="login-button pointer" type="button">Log in</button>
+            </div>
+          </div>
+          <div class="main-content flex dir-col">
+            <!-- <div class="popular-artist">
+              <h2>Popular Artist</h2>
+              <div class="card-container flex">
+                <div class="card flex dir-col pointer">
+                  <button class="play-button box pointer" type="button">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                  <img
+                    class="circle-img"
+                    src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca"
+                    alt="Pritam"
+                  />
+                  <div class="card-heading">Pritam</div>
+                  <p class="card-content">Artist</p>
+                </div>
+                <div class="card flex dir-col pointer">
+                  <button class="play-button box pointer" type="button">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                  <img
+                    class="circle-img"
+                    src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca"
+                    alt="Pritam"
+                  />
+                  <div class="card-heading">Pritam</div>
+                  <p class="card-content">Artist</p>
+                </div>
+              </div>
+            </div> -->
+            <div class="popular-album">
+              <h2>Popular Albums</h2>
+              <div id="albums" class="card-container">
+              </div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="play-bar flex align-center">
+         <div class="playing-song songlist flex align-center">
+            <div class="flex songleft align-center pointer display">
+              <div class="none bars">
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                </div>    
+            <div class="display info">
+                <div class="display song-name"></div>
+                <div class="display song-artist"></div>
+            </div>
+            </div>
+         </div>
+        <div class="play-box flex dir-col justify-center align-center">
+            <div class="play-bar-buttons flex align-center justify-center">
+                <i class="fa-solid fa-shuffle pointer"></i>
+                <i class=" prev fa-solid fa-backward-step pointer"></i>
+                <i class="play-pause fa-solid fa-circle-play pointer"></i>
+                <i class="next fa-solid fa-forward-step pointer"></i>
+                <img class="replay pointer"  src="img/replay.svg" alt="replayicon">
+            </div>
+            <div class="play-duration flex align-center justify-center ">
+                <span class="song-current-time">-:--</span>
+                <div class="play-line pointer">
+                  <div class="circle"></div>
+                </div>
+                <span class="song-time">-:--</span>
+            </div>
+        </div>
+        <div class="side-box flex align-center">
+            <i class="fa-solid fa-volume-high pointer hoverwhite"></i>
+            <i class="display-none fa-solid fa-volume-low pointer hoverwhite"></i>
+            <i class="display-none fa-solid fa-volume-xmark pointer hoverwhite"></i>
+            <input type="range" name="" id="volume">
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
