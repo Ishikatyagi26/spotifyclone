@@ -1,0 +1,126 @@
+.flex{
+    display: flex;
+}
+.dir-col{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.p-1{
+    padding: 20px 24px;
+}
+.hoverwhite{
+    color: var(--text-color-light);
+}
+.hoverwhite:hover{
+    color: var(--text-color);
+}
+.pointer:hover{
+    cursor: pointer;
+}
+/* .border{
+    border:2px solid red;
+} */
+
+/* Custom Scrollbar for Webkit Browsers */
+.scrolbar::-webkit-scrollbar {
+    width: 10px; /* Adjust the width if needed */
+}
+
+.scrolbar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Dark thumb */
+    border-radius: 4px;
+}
+
+.scrolbar::-webkit-scrollbar-thumb:vertical {
+    min-height: 20px; /* Minimum height of the scrollbar thumb */
+}
+
+.scrolbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Lighter thumb on hover */
+}
+
+.scrolbar::-webkit-scrollbar-button {
+    display: none; /* Hide the arrows */
+}
+
+/* Custom Scrollbar for Firefox */
+.scrolbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+/* Set the minimum height of the scrollbar thumb in Firefox */
+.scrolbar::-moz-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    min-height: 20px; /* Minimum height of the scrollbar thumb */
+}
+
+.scrolbar::-moz-scrollbar-thumb:hover {
+    background-color: #555; /* Lighter thumb on hover */
+}
+
+
+/* music bar animation optional */
+.none .bar{
+    display: none;
+}
+
+.bars{
+    /* position: absolute;
+    left: -11px;
+    top: 6px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50px;
+  }
+
+  .visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+  }
+
+  .bar {
+    width: 3px;
+    height: 20px;
+    background: #0f0;
+    opacity: 0.7;
+    animation: bounce 1s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+
+  .bar:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .bar:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+
+  .bar:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .bar:nth-child(5) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: scaleY(1);
+    }
+    40% {
+      transform: scaleY(1.5);
+    }
+    60% {
+      transform: scaleY(1.2);
+    }
+  }
